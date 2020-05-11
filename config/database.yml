@@ -52,5 +52,5 @@ production:
   <<: *default
   database: kenzemi2_production
   username: root
-  password: <%= ENV['KENZEMI2_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
