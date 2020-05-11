@@ -1,0 +1,10 @@
+.top-page
+  .top-page__header
+    .top-page__header__box
+      .top-page__header__box__logo
+        = image_tag 'kensazemi.png'
+      .top-page__header__box__user
+        .top-page__header__box__user__userId
+          = "user id: #{current_user.id}"
+        .top-page__header__box__user__userName
+          = current_user.name

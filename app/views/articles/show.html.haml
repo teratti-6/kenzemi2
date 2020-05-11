@@ -1,0 +1,22 @@
+%p#notice= notice
+= render "./layouts/header"
+.study
+  .study__box
+    %p.img-detail
+      %b.img-detail__text
+        Resson 
+        = @article.lesson_id
+      = @article.title
+    .movies
+      = link_to @article.video_url.to_s do
+        = image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+    .changes
+      -if @prev != nil
+        = link_to 'Back', article_path(@prev.id)
+      -else
+        = link_to 'TOP', articles_path
+      　　|　　
+      -if @next != nil
+        = link_to 'Next', article_path(@next.id)
+      -else
+        = link_to 'TOP', articles_path

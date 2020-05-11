@@ -1,0 +1,107 @@
+.login {
+    background-color: rgb(235, 235, 235); 
+    height: 100%;
+    padding: 40px 0;
+    font-family: monospace;
+  &__box {
+    background-color: #fff;
+    width: 700px;
+    height: 70%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  &__h {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+  
+  }
+  .field {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+.actions {
+  display: block;
+  text-align: center;
+  input {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+.signup-btn {
+  text-align: center;
+  margin-top: 30px;
+  a {
+    text-decoration: none;
+    color: blue;
+    border: solid 1px rgb(235, 235, 235);
+    padding: 8px;
+    &:hover {
+      background-color: rgb(235, 235, 235);
+    }
+  }
+}
+.forget-password {
+  text-align: center;
+  margin-top: 30px;
+  a {
+    text-decoration: none;
+    color: blue;
+    border: solid 1px rgb(235, 235, 235);
+    padding: 8px;
+    &:hover {
+      background-color: rgb(235, 235, 235);
+    }
+
+  }
+}
+.grid-6 {
+  text-align: end;
+  margin: 30px 10px 0 0;
+  a  {
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: monospace;
+    margin-left: 10px;
+    &:hover {
+      opacity:0.8;
+      filter:alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+    }
+  }
+  a.post {
+    background-color: blue;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: monospace;
+    margin-left: 10px;
+    &:hover {
+      opacity:0.8;
+      filter:alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+    }
+  }
+}
+
+p.alert {
+  text-align: center;
+  margin-top: -25px;
+  height: 32px;
+  line-height: 2.5;
+  color: red;
+}
+p.notice {
+  text-align: center;
+  margin-top: -25px;
+  height: 32px;
+  line-height: 2.5;
+  color: blue;
+}

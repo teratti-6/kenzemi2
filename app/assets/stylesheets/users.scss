@@ -1,0 +1,148 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// users#index
+.top-page {
+  &__header {
+    @media only screen and ( max-device-width: 480px) {
+    width: 110%;
+    }
+    &__box {
+      display: flex;
+      justify-content: space-around;
+      border-bottom:solid 1px ;
+      @media only screen and ( max-device-width: 480px) {
+        width: 1080px;
+      }
+      &__logo {
+      }
+      &__user {
+        line-height: 260%;
+        &__userId {
+        }
+        &__userName {
+        }
+      }
+    }
+  }
+}
+
+.study {
+  background-color: rgb(235, 235, 235);
+  margin: 0 auto;
+  padding: 15px 150px;
+  @media only screen and ( max-device-width: 480px) {
+    padding: 70px 127px;
+  }
+  &__box {
+    background-color: #fff;
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__lesson {
+        width: 85%;
+        margin: 20px 10px;
+        @media only screen and ( max-device-width: 480px) {
+          width: 400px;
+        }
+        &__img {
+          .lesson-img {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 3.5;
+            /* margin-bottom: -4px; */
+            font-family: monospace;
+            color: white;
+            background-color: blue;
+          }
+        }
+        &__that {
+          @media only screen and ( max-device-width: 480px) {
+            line-height: 4;
+            text-align: center;
+          }
+          .lesson-change {
+            text-decoration: none;
+
+          }
+          &__move {
+            font-size: 20px;
+            border-top: solid 1px rgb(235, 235, 235);
+            font-family: monospace;
+            &:hover {
+              background-color: rgb(235, 235, 235);
+            }
+            &:active {
+              background-color: #fff;
+            }
+            @media only screen and ( max-device-width: 480px) {
+              height: 200px;
+              font-size: 50px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// users#show
+.mypage {
+  padding: 15px 0;
+  background-color: rgb(235, 235, 235);
+  &__wrap {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    &__right {
+      width: 30%;
+      padding: 15px 15px;
+      &__link {
+        text-decoration: none;
+        &__list {
+          height: 40px;
+          line-height: 2.5;
+          text-align: center;
+          border: solid 1px rgb(235, 235, 235);
+          &:hover {
+            background-color: rgb(235, 235, 235);
+          }
+          &:active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    &__left {
+      width: 50%;
+      padding: 15px 15px;
+      &__list {
+        height: 160px;
+        width: 100%;
+        text-align: center;
+        line-height: 6;
+        font-size: 30px;
+        background-image: url("beauty1.jpeg");
+        color: #fff;
+      }
+      .lesson {
+        display: flex;
+        &__movie {
+          &__img {
+
+          }
+        }
+        &__memo {
+
+        }
+      }
+    }
+  }
+}
