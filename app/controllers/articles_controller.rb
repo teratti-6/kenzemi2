@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     @articles5 = Article.where(subject_id:5)
     @articles6 = Article.where(subject_id:6)
     
-    @subjects1 = Subject.find(1)
+    @subjects8 = Subject.find(8)
     @subjects2 = Subject.find(2)
     @subjects3 = Subject.find(3)
     @subjects4 = Subject.find(4)
