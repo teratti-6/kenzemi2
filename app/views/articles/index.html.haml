@@ -10,8 +10,14 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
             = "#{@subjects2.name}"
@@ -19,8 +25,14 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
             = "#{@subjects3.name}"
@@ -28,8 +40,14 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
             = "#{@subjects4.name}"
@@ -37,8 +55,14 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
             = "#{@subjects5.name}"
@@ -46,8 +70,14 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
             = "#{@subjects6.name}"
@@ -55,5 +85,11 @@
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
-                .thumbnail
-                  = link_to article.title, article 
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  = image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+                  .playlogo
+                    %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
