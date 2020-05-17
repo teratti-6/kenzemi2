@@ -1,7 +1,12 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.headerlogo {
+  text-decoration: none;
+  &:hover {
+    background-color: #fff;
+  }
+}
 .img-detail {
   margin-top: 40px;
   padding-top: 25px;
@@ -11,7 +16,54 @@
 
   }
 }
+
+
+.study-second {
+  background-color: rgb(235, 235, 235);
+  margin: 0 auto;
+  padding: 15px 50px;
+  display: flex;
+  @media only screen and ( max-device-width: 480px) {
+  padding: 70px 127px;
+  }
+  .sidemenu {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    margin-right: 30px;
+    &__box {
+      height: 50px;
+      line-height: 2.5;
+      font-size: 16px;
+      text-align: center;
+      &:hover {
+        text-decoration: none;
+      }
+      .sidelink {
+        width: 200px;
+        border-bottom: solid 1px #ededed;
+        transition-property: all;
+        transition: 0.1s linear;
+        padding: 10px;
+        &:hover {
+          background-color: blue;
+        }
+        &:active {
+          background: #1a92c2;
+          color: #1679a1;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+          transition-property: all;
+          transition: 0.1s linear;
+        }
+      }
+    }
+  }
+  &__box {
+    background-color: #fff;
+  }
+}
 .movies {
+  width: 100%;
   margin-top: 40px;
   text-align: center;
   position: relative;
@@ -37,7 +89,6 @@
 }
 .article-memo {
   width: 70%;
-  text-align: center;
   font-size: 20px;
   padding-top: 25px;
   margin: 0 auto;

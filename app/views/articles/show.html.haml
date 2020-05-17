@@ -1,7 +1,35 @@
 %p#notice= notice
 = render "./layouts/header"
-.study
-  .study__box
+.study-second
+  .sidemenu
+    - @articles1.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          オリエンテーション
+    - @articles2.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          臨床生理学
+    - @articles3.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          病理組織細胞学
+    - @articles4.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          臨床化学
+    - @articles5.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          臨床微生物学
+    - @articles6.each do |article|
+      = link_to article ,class: "sidemenu__box" do
+        .sidelink
+          臨床血液学
+    = link_to root_path ,class: "sidemenu__box" do
+      .sidelink
+        TOPページへ
+  .study-second__box
     %p.img-detail
       %b.img-detail__text
         = @article.title
