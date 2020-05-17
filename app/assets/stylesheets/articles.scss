@@ -14,6 +14,19 @@
 .movies {
   margin-top: 40px;
   text-align: center;
+  position: relative;
+  .playlogo {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    font-size: 100px;
+    color: #fff;
+    transition: 0.3s linear;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 .article-topic {
   text-align: center;
