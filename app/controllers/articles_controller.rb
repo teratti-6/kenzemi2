@@ -23,6 +23,12 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @articles1 = Article.where(subject_id:1 , lesson_id:1)
+    @articles2 = Article.where(subject_id:2 , lesson_id:1)
+    @articles3 = Article.where(subject_id:3 , lesson_id:1)
+    @articles4 = Article.where(subject_id:4 , lesson_id:1)
+    @articles5 = Article.where(subject_id:5 , lesson_id:1)
+    @articles6 = Article.where(subject_id:6 , lesson_id:1)
     begin
       @next = @article.next
     rescue
