@@ -3,22 +3,61 @@
     height: 100%;
     padding: 40px 0;
     font-family: monospace;
+    @media only screen and ( max-device-width: 480px) {
+      width: 110%;
+      height: 60vh;
+      }
   &__box {
     background-color: #fff;
     width: 700px;
     height: 70%;
     margin: 0 auto;
     padding: 40px 0;
+    @media only screen and ( max-device-width: 480px) {
+      background-color: #fff;
+      width: 90%;
+      height: 95%;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
   }
   &__h {
     text-align: center;
     font-size: 40px;
     font-weight: 900;
-  
+    @media only screen and ( max-device-width: 480px) {
+      font-size: 70px;
+    }  
   }
+#new_user {
+  @media only screen and ( max-device-width: 480px) {
+    font-size: 40px;
+    margin-top: 200px;
+  }
+}
   .field {
     text-align: center;
     margin-top: 50px;
+    #user_email {
+      @media only screen and ( max-device-width: 480px) {
+        height: 50px;
+        border: solid 1px #ededed;
+        margin-top: 30px;
+      }
+    }
+    #user_password {
+      @media only screen and ( max-device-width: 480px) {
+        height: 50px;
+        border: solid 1px #ededed;
+        margin-top: 30px;
+      }
+    }
+    #user_remember_me {
+      @media only screen and ( max-device-width: 480px) {
+        height: 50px;
+        width: 50px;
+      }
+    }
   }
 }
 .actions {
@@ -29,6 +68,13 @@
     width: 100px;
     height: 50px;
     font-size: 16px;
+    @media only screen and ( max-device-width: 480px) {
+      margin-top: 200px;
+      width: 300px;
+      height: 100px;
+      font-size: 50px;
+      background-color: aliceblue;
+    }
   }
 }
 .signup-btn {

@@ -35,9 +35,13 @@
         = @article.title
     .movies
       = link_to @article.video_url.to_s do
-        = image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
-        .playlogo
-          %i.far.fa-play-circle
+        -# = image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot")
+      %video#my-video.video-js{:controls => "", :controlslist => "nodownload", "data-setup" => "#{@article.video}", :height => "200", :alt => "screenshot", :poster => "#{@article.video_url(:screenshot).to_s}", :preload => "auto", :width => "400"}
+        %source{:src => "#{@article.video}", :type => "video/mp4"}
+        %source{:src => "#{@article.video}", :type => "video/webm"}
+        %p.vjs-no-js
+        -# .playlogo
+        -#   %i.far.fa-play-circle
     .article-topic
       学習のコツ
     .article-memo
