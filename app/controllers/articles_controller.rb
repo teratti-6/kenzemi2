@@ -23,12 +23,24 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @articles1 = Article.where(subject_id:1 , lesson_id:1)
-    @articles2 = Article.where(subject_id:2 , lesson_id:1)
-    @articles3 = Article.where(subject_id:3 , lesson_id:1)
-    @articles4 = Article.where(subject_id:4 , lesson_id:1)
-    @articles5 = Article.where(subject_id:5 , lesson_id:1)
-    @articles6 = Article.where(subject_id:6 , lesson_id:1)
+    @sub1lesson1 = Article.where(subject_id:1 , lesson_id:1)
+    @sub1lesson2 = Article.where(subject_id:1 , lesson_id:2)
+    @sub1lesson3 = Article.where(subject_id:1 , lesson_id:3)
+    @sub2lesson1 = Article.where(subject_id:2 , lesson_id:1)
+    @sub2lesson2 = Article.where(subject_id:2 , lesson_id:2)
+    @sub2lesson3 = Article.where(subject_id:2 , lesson_id:3)
+    @sub3lesson1 = Article.where(subject_id:3 , lesson_id:1)
+    @sub3lesson2 = Article.where(subject_id:3 , lesson_id:2)
+    @sub3lesson3 = Article.where(subject_id:3 , lesson_id:3)
+    @sub4lesson1 = Article.where(subject_id:4 , lesson_id:1)
+    @sub4lesson2 = Article.where(subject_id:4 , lesson_id:2)
+    @sub4lesson3 = Article.where(subject_id:4 , lesson_id:3)
+    @sub5lesson1 = Article.where(subject_id:5 , lesson_id:1)
+    @sub5lesson2 = Article.where(subject_id:5 , lesson_id:2)
+    @sub5lesson3 = Article.where(subject_id:5 , lesson_id:3)
+    @sub6lesson1 = Article.where(subject_id:6 , lesson_id:1)
+    @sub6lesson2 = Article.where(subject_id:6 , lesson_id:2)
+    @sub6lesson3 = Article.where(subject_id:6 , lesson_id:3)
     begin
       @next = @article.next
     rescue

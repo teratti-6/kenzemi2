@@ -16,47 +16,105 @@
 
   }
 }
+#accordion {
+  height: 100%;
+  width: 200px;
+  background-color: #fff;
+  margin-right: 30px;
+}
+#accordion dt {
+  background: #ddd;
+  padding: 10px;
+  border-top: 1px #ccc solid;
+  width: 200px;
+  border-bottom: solid 1px #ededed;
+  transition-property: all;
+  transition: 0.1s linear;
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: blue;
+  }
+  &:active {
+    background: #1a92c2;
+    color: #1679a1;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+    transition-property: all;
+    transition: 0.1s linear;
+  }
+}
+.sidemenu {
+  background: #ddd;
+  padding: 10px;
+  border-top: 1px #ccc solid;
+  width: 200px;
+  border-bottom: solid 1px #ededed;
+  transition-property: all;
+  transition: 0.1s linear;
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: blue;
+  }
+  &:active {
+    background: #1a92c2;
+    color: #1679a1;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+    transition-property: all;
+    transition: 0.1s linear;
+  }
+  .sidelink {
+    line-height: 2.5;
+    font-size: 16px;
+    text-align: center;
+    &:hover {
+      text-decoration: none;
+      background-color: blue;
+    }
+    &:active {
+      background: #1a92c2;
+      color: #1679a1;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+      transition-property: all;
+      transition: 0.1s linear;
+      text-decoration: none;
+    }
+  }
+}
+#accordion dt a {
+  line-height: 2.5;
+  font-size: 16px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background-color: blue;
+  }
+  &:active {
+    background: #1a92c2;
+    color: #1679a1;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+    transition-property: all;
+    transition: 0.1s linear;
+    text-decoration: none;
+  }
+}
+#accordion dd {
+  padding: 10px;
+}
 
-
+#accordion dd a {
+  text-decoration: none;
+  &:hover {
+    background-color: blue;
+  }
+}
 .study-second {
   background-color: rgb(235, 235, 235);
   margin: 0 auto;
   padding: 15px 50px;
   display: flex;
   @media only screen and ( max-device-width: 480px) {
-  padding: 70px 127px;
-  }
-  .sidemenu {
-    height: 100%;
-    width: 200px;
-    background-color: #fff;
-    margin-right: 30px;
-    &__box {
-      height: 50px;
-      line-height: 2.5;
-      font-size: 16px;
-      text-align: center;
-      &:hover {
-        text-decoration: none;
-      }
-      .sidelink {
-        width: 200px;
-        border-bottom: solid 1px #ededed;
-        transition-property: all;
-        transition: 0.1s linear;
-        padding: 10px;
-        &:hover {
-          background-color: blue;
-        }
-        &:active {
-          background: #1a92c2;
-          color: #1679a1;
-          text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
-          transition-property: all;
-          transition: 0.1s linear;
-        }
-      }
-    }
+    width: 110%;
   }
   &__box {
     background-color: #fff;

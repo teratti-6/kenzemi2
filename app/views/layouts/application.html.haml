@@ -1,13 +1,15 @@
 !!! 5
 %html(lang="ja")
-  %head
+  %head    
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta{:content => "”width=device-width,initial-scale=1.0″", :name => "”viewport”"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %script{:src => "http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}/
+    %script{:src => "../assets/javascript/lesson.js", :type => "text/javascript"}
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.7.2/css/all.css", :integrity => "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", :rel => "stylesheet"}/
     %link{:href => "http://vjs.zencdn.net/5.10.8/video-js.css", :rel => "stylesheet"}/
-    %script{:src => "http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"}
     %title= content_for?(:title) ? yield(:title) : "Kenzemi"
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
