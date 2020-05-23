@@ -1,33 +1,105 @@
 %p#notice= notice
 = render "./layouts/header"
 .study-second
-  .sidemenu
-    - @articles1.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          オリエンテーション
-    - @articles2.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          臨床生理学
-    - @articles3.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          病理組織細胞学
-    - @articles4.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          臨床化学
-    - @articles5.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          臨床微生物学
-    - @articles6.each do |article|
-      = link_to article ,class: "sidemenu__box" do
-        .sidelink
-          臨床血液学
-    = link_to root_path ,class: "sidemenu__box" do
-      .sidelink
+  %dl#accordion
+    %dt
+      %a{:href => "#"}
+        オリエンテーション
+    %dd
+      - @sub1lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub1lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub1lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    %dt
+      %a{:href => "#"} 
+        臨床生理学
+    %dd
+      - @sub2lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub2lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub2lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    %dt
+      %a{:href => "#"} 
+        病理組織細胞学
+    %dd
+      - @sub3lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub3lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub3lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    %dt
+      %a{:href => "#"} 
+        臨床化学
+    %dd
+      - @sub4lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub4lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub4lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    %dt
+      %a{:href => "#"} 
+        臨床微生物学
+    %dd
+      - @sub5lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub5lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub5lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    %dt
+      %a{:href => "#"} 
+        臨床血液学
+    %dd
+      - @sub6lesson1.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson1
+        ｜
+      - @sub6lesson2.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 2
+        ｜
+      - @sub6lesson3.each do |lesson|
+        %a{:href => "#{lesson.id}"}
+          > lesson 3
+        |
+    .sidemenu
+      = link_to root_path ,class: "sidelink" do
         TOPページへ
   .study-second__box
     %p.img-detail
@@ -40,8 +112,6 @@
         %source{:src => "#{@article.video}", :type => "video/mp4"}
         %source{:src => "#{@article.video}", :type => "video/webm"}
         %p.vjs-no-js
-        -# .playlogo
-        -#   %i.far.fa-play-circle
     .article-topic
       学習のコツ
     .article-memo
