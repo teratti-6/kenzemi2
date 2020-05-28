@@ -3,6 +3,7 @@
     height: 100%;
     padding: 40px 0;
     font-family: monospace;
+    text-align: center;
     @media only screen and ( max-device-width: 480px) {
       width: 110%;
       height: 60vh;
@@ -60,6 +61,24 @@
     }
   }
 }
+.fielder {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  label {
+    margin-left: 10px;
+    @media only screen and ( max-device-width: 480px) {
+    margin: 20px 0 0 20px;
+    }
+  }
+  #user_remember_me {
+    @media only screen and ( max-device-width: 480px) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
 .actions {
   display: block;
   text-align: center;
@@ -107,6 +126,11 @@
 .grid-6 {
   text-align: end;
   margin: 30px 10px 0 0;
+  @media only screen and ( max-device-width: 480px) {
+    height: 100px;
+    width: 170px;
+    font-size: 34px;
+  }
   a  {
     background-color: red;
     text-decoration: none;
@@ -115,6 +139,10 @@
     border-radius: 20px;
     font-family: monospace;
     margin-left: 10px;
+    @media only screen and ( max-device-width: 480px) {
+      height: 100px;
+      width: 170px;
+    }
     &:hover {
       opacity:0.8;
       filter:alpha(opacity=80);
@@ -150,4 +178,19 @@ p.notice {
   height: 32px;
   line-height: 2.5;
   color: blue;
+}
+.password-remember {
+  margin-top: 30px;
+  @media only screen and ( max-device-width: 480px) {
+    margin-top: 70px;
+    }
+  .password-save {
+    @media only screen and ( max-device-width: 480px) {
+    font-size: 40px;
+    }
+    &:hover {
+      background-color: blue;
+      text-decoration: none;
+    }
+  }
 }

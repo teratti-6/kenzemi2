@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   devise_for :admins, controllers: {
       sessions:      'admins/sessions',
       passwords:     'admins/passwords',

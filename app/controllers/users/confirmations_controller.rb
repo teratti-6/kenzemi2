@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 class Users::ConfirmationsController < Devise::ConfirmationsController
+  default from: 'notifications@example.com'
+ 
+  def welcome_email
+    @user = params[:user]
+    @url  = 'http://example.com/login'
+    mail(to: @user.email, subject: '私の素敵なサイトへようこそ')
+  end
   # GET /resource/confirmation/new
   # def new
   #   super

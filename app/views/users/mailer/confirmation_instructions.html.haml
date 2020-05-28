@@ -1,3 +1,26 @@
-%p= t('.greeting', recipient: @email)
-%p= t('.instruction')
-%p= link_to t('.action'), confirmation_url(@resource, confirmation_token: @token)
+-# %p= t('.greeting', recipient: @email)
+-# %p= t('.instruction')
+-# %p= link_to t('.action'), confirmation_url(@resource, confirmation_token: @token)
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      = @user.name
+      様、
+      %a(href="http://175.41.227.60/")
+        MEDWIDE動画学習アプリ
+      へようこそ。
+    %p
+      %a(href="http://175.41.227.60/")
+        MEDWIDE動画学習アプリ
+      へのサインアップが成功しました。
+      = "your username is: #{@user.name}."
+      %br/
+    %p
+      このサイトにログインするには、
+      %a(href="http://175.41.227.60/")
+        MEDWIDE動画学習アプリ
+      をクリックしてください。
+    %p ご入会ありがとうございます。どうぞお楽しみくださいませ。
