@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::ConfirmationsController < Devise::ConfirmationsController
-  default from: 'notifications@example.com'
+  # default from: 'notifications@example.com'
  
   def welcome_email
     @user = params[:user]
