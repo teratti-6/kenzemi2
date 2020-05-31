@@ -5,6 +5,7 @@
         = image_tag 'kensazemi.png'
 .login
   .login__box
+    a
     %h2.login__h= t('.sign_in')
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field
