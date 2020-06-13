@@ -5,17 +5,19 @@
   %body
     %h1
       = @user.name
-      様、
+      様、ご入会ありがとうございます。
       = link_to confirmation_url(@resource, confirmation_token: @token) do
         MEDWIDE動画学習アプリ
       へようこそ。
     %p
       MEDWIDE動画学習アプリ
-      へのサインアップが成功しました。
+      へのサインアップが完了しました。
       = "your username is: #{@user.name}."
       %br/
     %p
       このサイトにログインするには、
       MEDWIDE動画学習アプリ
       をクリックしてください。
+    %h2
+      
     %p ご入会ありがとうございます。どうぞお楽しみくださいませ。
