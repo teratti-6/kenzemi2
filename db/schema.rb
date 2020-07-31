@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_061811) do
+ActiveRecord::Schema.define(version: 2020_07_31_143643) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 2020_05_26_061811) do
     t.text "memo"
     t.index ["lesson_id"], name: "index_articles_on_lesson_id"
     t.index ["subject_id"], name: "index_articles_on_subject_id"
+  end
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "subject_id", null: false
+    t.bigint "lesson_id", null: false
+    t.index ["lesson_id"], name: "index_images_on_lesson_id"
+    t.index ["subject_id"], name: "index_images_on_subject_id"
   end
 
   create_table "lessons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -69,4 +80,6 @@ ActiveRecord::Schema.define(version: 2020_05_26_061811) do
 
   add_foreign_key "articles", "lessons"
   add_foreign_key "articles", "subjects"
+  add_foreign_key "images", "lessons"
+  add_foreign_key "images", "subjects"
 end
