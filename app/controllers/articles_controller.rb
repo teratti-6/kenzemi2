@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
     @sub6lesson1 = Article.where(subject_id:6 , lesson_id:1)
     @sub6lesson2 = Article.where(subject_id:6 , lesson_id:2)
     @sub6lesson3 = Article.where(subject_id:6 , lesson_id:3)
+    @img1les1 = Image.where(subject_id:1 , lesson_id:1)
     begin
       @next = @article.next
     rescue

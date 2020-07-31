@@ -87,7 +87,6 @@
     .sidemenu
       = link_to root_path ,class: "sidelink" do
         TOPページへ
-
   .study-second__box
     %p.img-detail
       %b.img-detail__text
@@ -101,15 +100,10 @@
         %p.vjs-no-js
     .article-topic
       学習のコツ
+    .pdf-box
+    - @img1les1.each do |image|
+      %p.pdf
+        %a{:href => "/pdfjs/web/viewer.html?file=#{image.image}", :target => "_blank"} 
+          = "#{image.name}"
     .article-memo
       = @article.memo
-    .changes
-      -if @prev != nil
-        = link_to '◀︎ Back', article_path(@prev.id),class: "changes__transition"
-      -else
-        = link_to '◀︎ TOP', articles_path,class: "changes__transition"
-      　　|　　
-      -if @next != nil
-        = link_to 'Next ▶︎', article_path(@next.id),class: "changes__transition"
-      -else
-        = link_to 'TOP ▶︎', articles_path,class: "changes__transition"
