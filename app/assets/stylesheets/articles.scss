@@ -36,7 +36,7 @@ dl#accordion {
   padding: 10px;
   text-decoration: none;
   @media only screen and ( max-device-width: 480px) {
-    width: 110px;
+    width: 91px;
   }
 }
 #accordion dt a {
@@ -62,7 +62,7 @@ dl#accordion {
 #accordion dd {
   padding: 5px;
   @media only screen and ( max-device-width: 480px) {
-  width: 145px;
+  width: 200px;
   background-color: #fff;
   }
 }
@@ -133,6 +133,7 @@ dl#accordion {
   padding: 15px 50px;
   display: flex;
   @media only screen and ( max-device-width: 480px) {
+    padding: 1px;
     width: 110%;
     display: block;
   }
