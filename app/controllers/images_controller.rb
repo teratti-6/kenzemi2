@@ -16,6 +16,14 @@ class ImagesController < ApplicationController
     end
   end
 
+  def show
+    @image = Image.find(params[:id])
+    # @article = Article.find(params[:id])
+  end
+
+  def edit
+    @image = Image.all
+  end
   private
 
     def image_paprams

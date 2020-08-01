@@ -6,222 +6,34 @@
       %a{:href => "#"}
         = "#{@subjects1.name}"
     %dd
-      - @sub1lesson1.each do |lesson|
+      - @sub1articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson1
-      - @sub1lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson2
-      - @sub1lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson3
-      - @sub1lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson4
-      - @sub1lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson5
-      - @sub1lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson6
-      - @sub1lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson7
-      - @sub1lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson8
-      - @sub1lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson9
-      - @sub1lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson10
-      - @img1les1.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img1image.each do |image|
         .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img1les10.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          = link_to "#{image.name}", image_path,class: "pdfree"
+          -# %a{:href => "#{image.image}", :target => "_blank"} 
+          -#   = "#{image.name}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects2.name}"
     %dd
-      - @sub2lesson1.each do |lesson|
+      - @sub2articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub2lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub2lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub2lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub2lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub2lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub2lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub2lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub2lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub2lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img2les1.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img2image.each do |image|
         .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img2les10.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-
+          = link_to "#{image.name}", image.subject_id,class: "pdfree"
+          -# %a{:href => "#{image.image}", :target => "_blank"} 
+          -#   = "#{image.name}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects3.name}"
     %dd
-      - @sub3lesson1.each do |lesson|
+      - @sub3articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub3lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub3lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub3lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub3lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub3lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub3lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub3lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub3lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub3lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img3les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img3les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img3image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
@@ -229,73 +41,10 @@
       %a{:href => "#"} 
         = "#{@subjects4.name}"
     %dd
-      - @sub4lesson1.each do |lesson|
+      - @sub4articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub4lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub4lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub4lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub4lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub4lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub4lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub4lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub4lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub4lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img4les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img4les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img4image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
@@ -303,73 +52,10 @@
       %a{:href => "#"} 
         = "#{@subjects5.name}"
     %dd
-      - @sub5lesson1.each do |lesson|
+      - @sub5articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub5lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub5lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub5lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub5lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub5lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub5lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub5lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub5lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub5lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img5les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img5les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img5image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
@@ -377,73 +63,10 @@
       %a{:href => "#"} 
         = "#{@subjects6.name}"
     %dd
-      - @sub6lesson1.each do |lesson|
+      - @sub6articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub6lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub6lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub6lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub6lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub6lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub6lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub6lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub6lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub6lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img6les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img6les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img6image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
@@ -451,73 +74,10 @@
       %a{:href => "#"} 
         = "#{@subjects7.name}"
     %dd
-      - @sub7lesson1.each do |lesson|
+      - @sub7articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub7lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub7lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub7lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub7lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub7lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub7lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub7lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub7lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub7lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img7les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img7les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img7image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
@@ -525,73 +85,10 @@
       %a{:href => "#"} 
         = "#{@subjects8.name}"
     %dd
-      - @sub8lesson1.each do |lesson|
+      - @sub8articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          lesson 1
-      - @sub8lesson2.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 2
-      - @sub8lesson3.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 3
-      - @sub8lesson4.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 4
-      - @sub8lesson5.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 5
-      - @sub8lesson6.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 6
-      - @sub8lesson7.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 7
-      - @sub8lesson8.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 8
-      - @sub8lesson9.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 9
-      - @sub8lesson10.each do |lesson|
-        %a{:href => "#{lesson.id}"}
-          lesson 10
-      - @img8les1.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les2.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les3.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les4.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les5.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les6.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les7.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les8.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les9.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
-      - @img8les10.each do |image|
+          ="lesson #{lesson.lesson_id}"
+      - @img8image.each do |image|
         .pdfTag
           %a{:href => "#{image.image}", :target => "_blank"} 
             = "#{image.name}"
