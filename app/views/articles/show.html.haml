@@ -103,7 +103,8 @@
     .pdf-box
     - @img1les1.each do |image|
       %p.pdf
-        %a{:href => "/pdfjs/web/viewer.html?file=#{image.image}", :target => "_blank"} 
+        -# %a{:href => "/pdfjs/web/viewer.html?file=#{image.image}", :target => "_blank"} 
+        %a{:href => "#{image.image}", :target => "_blank"} 
           = "#{image.name}"
     .article-memo
       = @article.memo
