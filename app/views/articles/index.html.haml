@@ -115,8 +115,52 @@
                   = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
-            = "#{@subjects5.name}"
-        - @articles5.each do |article|
+            = "#{@subjects6.name}"
+        - @articles6.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  -# = image_tag(article.video_url(:screenshot).to_s, :controls => "",:controlslist => "nodownload", id: "video", :alt => "screenshot")
+                %video#my-video.video-js{:controls => "", :controlslist => "nodownload", "data-setup" => "#{article.video}", :height => "200", :alt => "screenshot", :poster => "#{article.video_url(:screenshot).to_s}", :preload => "auto", :width => "400"}
+                  %source{:src => "#{article.video}", :type => "video/mp4"}
+                  %source{:src => "#{article.video}", :type => "video/webm"}
+                  %p.vjs-no-js
+                    -# To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    -# %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"}
+                    -#   supports HTML5 video
+                  -# .playlogo
+                    -# %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects7.name}"
+        - @articles7.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                = link_to article.video_url.to_s ,class: "videoPlay" do
+                  -# = image_tag(article.video_url(:screenshot).to_s, :controls => "",:controlslist => "nodownload", id: "video", :alt => "screenshot")
+                %video#my-video.video-js{:controls => "", :controlslist => "nodownload", "data-setup" => "#{article.video}", :height => "200", :alt => "screenshot", :poster => "#{article.video_url(:screenshot).to_s}", :preload => "auto", :width => "400"}
+                  %source{:src => "#{article.video}", :type => "video/mp4"}
+                  %source{:src => "#{article.video}", :type => "video/webm"}
+                  %p.vjs-no-js
+                    -# To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    -# %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"}
+                    -#   supports HTML5 video
+                  -# .playlogo
+                    -# %i.far.fa-play-circle
+              .thumbnail-detail
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
+                .articles-text
+                  = article.memo
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects8.name}"
+        - @articles8.each do |article|
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
               .study__box__wrap__lesson__that__move
