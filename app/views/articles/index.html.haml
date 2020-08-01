@@ -9,7 +9,7 @@
         - @articles1.each do |article|
           .study__box__wrap__lesson__that
             = link_to root_path, class:"lesson-change" do
-              .study__box__wrap__lesson__that__move
+              .study__box__wrap__lesson__that__moves
                 = link_to article.video_url.to_s ,class: "videoPlay" do
                   -# = image_tag(article.video_url(:screenshot).to_s, :controls => "",:controlslist => "nodownload", id: "video", :alt => "screenshot")
                 -# %video#my-video.video-js{:controls => "", :controlslist => "nodownload", "data-setup" => "#{article.video}", :height => "200", :alt => "screenshot", :poster => "#{article.video_url(:screenshot).to_s}", :preload => "auto", :width => "400"}
@@ -21,9 +21,9 @@
                     -#   supports HTML5 video
                   -# .playlogo
                     -# %i.far.fa-play-circle
-              .thumbnail-detail
-                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnail"
-                .articles-text
+              .thumbnail-details
+                = link_to "▶︎  #{article.title}学習ページへ", article ,class: "thumbnails"
+                .articles-texts
                   = article.memo
         .study__box__wrap__lesson__img
           .lesson-img
