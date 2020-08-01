@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
     @articles4 = Article.where(subject_id:4)
     @articles5 = Article.where(subject_id:5)
     @articles6 = Article.where(subject_id:6)
+    @articles7 = Article.where(subject_id:7)
+    @articles8 = Article.where(subject_id:8)
     
     @subjects1 = Subject.find(1)
     @subjects2 = Subject.find(2)
