@@ -11,9 +11,9 @@
           ="lesson #{lesson.lesson_id}"
       - @img1image.each do |image|
         .pdfTag
-          = link_to "#{image.name}", image_path,class: "pdfree"
-          -# %a{:href => "#{image.image}", :target => "_blank"} 
-          -#   = "#{image.name}"
+          -# = link_to "#{image.name}", image_path,class: "pdfree"
+          %a{:href => "#{image.image}", :target => "_blank"} 
+            = "#{image.name}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects2.name}"
@@ -23,9 +23,9 @@
           ="lesson #{lesson.lesson_id}"
       - @img2image.each do |image|
         .pdfTag
-          = link_to "#{image.name}", image.subject_id,class: "pdfree"
-          -# %a{:href => "#{image.image}", :target => "_blank"} 
-          -#   = "#{image.name}"
+          -# = link_to "#{image.name}", image.subject_id,class: "pdfree"
+          %a{:href => "#{image.image}", :target => "_blank"} 
+            = "#{image.name}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects3.name}"
