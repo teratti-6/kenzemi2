@@ -95,7 +95,7 @@
         = link_to '◀︎ Back', article_path(@prev.id),class: "changes__transition"
       -else
         = link_to 'TOP', articles_path,class: "changes__transition"
-        　　|　　
+      　　|　　
       -if @next != nil
         = link_to 'Next ▶︎', article_path(@next.id),class: "changes__transition"
       -else
@@ -103,3 +103,9 @@
   .phone-menu
     .phone-menu__box
       = link_to "#{@subject.name}PDFファイル",image_path,class:"changes"
+  .lessonDetail
+    = "#{@subject.name}学習項目一覧"
+  .lessonitiran
+    - @lesid.each do |lesson|
+      %a{:href => "#{lesson.id}"}
+        ="#{lesson.title}"
