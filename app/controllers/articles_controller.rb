@@ -51,6 +51,7 @@ class ArticlesController < ApplicationController
 
     @article = Article.find(params[:id])
     @subid = @article.subject_id
+    @lesid = Article.where(subject_id: @subid, lesson_id: [1..10])
     @subject = Subject.find(@subid)
 
 

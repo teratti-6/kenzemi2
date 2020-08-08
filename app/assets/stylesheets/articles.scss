@@ -309,3 +309,41 @@ footer {
     }
   }
 }
+
+.lessonDetail {
+  display: none;
+  @media only screen and ( max-device-width: 480px) {
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    height: 100px;
+  }
+}
+.lessonitiran {
+  a {
+  display: none;
+  text-decoration: none;
+  line-height: 2.5;
+  padding: 4px;
+  background: blue;
+  color: #fff;
+  margin-right: 1px;
+  border-radius: 5px;
+  transition-property: all;
+  transition: 0.3s linear;
+    @media only screen and ( max-device-width: 480px) {
+      display: block;
+      font-size: 50px;
+      border: solid 1px blue;
+      line-height: 2.5;
+      padding: 8px;
+      background: blue;
+      color: #fff;
+      text-align: center;
+      margin-top: 50px;
+    }
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
