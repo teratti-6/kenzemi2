@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.new(image_paprams)
+    @image = Image.new(image_params)
     @image.name = params[:image][:image].original_filename
     @image.image = params[:image][:image].read
 
@@ -17,8 +17,10 @@ class ImagesController < ApplicationController
   end
 
   def show
-    @image = Image.find(params[:id])
-    # @article = Article.find(params[:id])
+    @image = Article.find(params[:id])
+    @imgid = @image.subject_id
+    @subject = Subject.find(@imgid)
+    @pdf = Image.where(subject_id: @imgid)
   end
 
   def edit
@@ -26,7 +28,7 @@ class ImagesController < ApplicationController
   end
   private
 
-    def image_paprams
+    def image_params
       params.require(:image).permit(:name, :image)
     end
 

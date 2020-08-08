@@ -27,6 +27,10 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    # @subjects = Subject.all
+    # @articles = @subjects.ids
+    # @articles = Article.where(subject_id: @articles).group_by &:subject_id
+
     @subjects1 = Subject.find(1)
     @subjects2 = Subject.find(2)
     @subjects3 = Subject.find(3)
@@ -45,14 +49,11 @@ class ArticlesController < ApplicationController
     @sub7articles = Article.where(subject_id:7)
     @sub8articles = Article.where(subject_id:8)
 
-    @img1image = Image.where(subject_id:1)
-    @img2image = Image.where(subject_id:2)
-    @img3image = Image.where(subject_id:3)
-    @img4image = Image.where(subject_id:4)
-    @img5image = Image.where(subject_id:5)
-    @img6image = Image.where(subject_id:6)
-    @img7image = Image.where(subject_id:7)
-    @img8image = Image.where(subject_id:8)
+    @article = Article.find(params[:id])
+    @subid = @article.subject_id
+    @subject = Subject.find(@subid)
+
+
     begin
       @next = @article.next
     rescue
