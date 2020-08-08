@@ -1,4 +1,14 @@
 = render "./layouts/header"
-.study-second
-  -# - @image.each do |image|
-  = "#{@image.name}"
+.pdf-test
+  = "#{@subject.name}PDFファイル一覧"
+  - @pdf.each do |pdf|
+    .pdf-show
+      %a{:href => "#{pdf.image}", :target => "_blank"}      
+        = "#{pdf.name}"
+  .pdf-show
+    %a{:href => article_path, :target => "_blank"}      
+      戻る
+  -# - @test.each do |test|
+  -#   .pdf-show
+  -#     %a{:href => "#{test.image}", :target => "_blank"}      
+  -#       = "#{test.name}"

@@ -2,96 +2,71 @@
 = render "./layouts/header"
 .study-second
   %dl#accordion
+    -# - @subjects.each do |subject|
+    -#   %dt
+    -#     %a{:href => "#"}
+    -#       = "#{subject.name}"
+    -#   %dd
+    -#   - @lesson = subject.id do
+    -#     - @articles[@lesson].each do |article|
+    -#       .pdfTag
+    -#         = link_to "#{article.title}",article,class: "pdfree"
     %dt
-      %a{:href => "#"}
+      %a{:href => "#"} 
         = "#{@subjects1.name}"
     %dd
       - @sub1articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img1image.each do |image|
-        .pdfTag
-          -# = link_to "#{image.name}", image_path,class: "pdfree"
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects2.name}"
     %dd
       - @sub2articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img2image.each do |image|
-        .pdfTag
-          -# = link_to "#{image.name}", image.subject_id,class: "pdfree"
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects3.name}"
     %dd
       - @sub3articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img3image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects4.name}"
     %dd
       - @sub4articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img4image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects5.name}"
     %dd
       - @sub5articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img5image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects6.name}"
     %dd
       - @sub6articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img6image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects7.name}"
     %dd
       - @sub7articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img7image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     %dt
       %a{:href => "#"} 
         = "#{@subjects8.name}"
     %dd
       - @sub8articles.each do |lesson|
         %a{:href => "#{lesson.id}"}
-          ="lesson #{lesson.lesson_id}"
-      - @img8image.each do |image|
-        .pdfTag
-          %a{:href => "#{image.image}", :target => "_blank"} 
-            = "#{image.name}"
+          ="#{lesson.title}"
     .sidemenu
       = link_to root_path ,class: "sidelink" do
         TOPページへ
@@ -107,6 +82,24 @@
         %source{:src => "#{@article.video}", :type => "video/webm"}
         %p.vjs-no-js
     .article-topic
-      -# 学習のコツ
+      .pdfname
+        = link_to "#{@subject.name}PDFファイル",image_path,class:"pdfname__transition" 
+      -# %a{:href => "#{image_path}"}
+      -#   = "#{@subject.name}PDFファイル"
+      -# = link_to @image, class:"changes" do
+        -# a
     .article-memo
       = @article.memo
+    .changes
+      -if @prev != nil
+        = link_to '◀︎ Back', article_path(@prev.id),class: "changes__transition"
+      -else
+        = link_to 'TOP', articles_path,class: "changes__transition"
+        　　|　　
+      -if @next != nil
+        = link_to 'Next ▶︎', article_path(@next.id),class: "changes__transition"
+      -else
+        = link_to 'TOP', articles_path,class: "changes__transition"
+  .phone-menu
+    .phone-menu__box
+      = link_to "#{@subject.name}PDFファイル",image_path,class:"changes"

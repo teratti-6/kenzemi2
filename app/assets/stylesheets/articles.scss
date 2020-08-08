@@ -22,7 +22,8 @@ dl#accordion {
   background-color: #fff;
   margin-right: 30px;
   @media only screen and ( max-device-width: 480px) {
-    display: -webkit-inline-box;
+    // display: -webkit-inline-box;
+    display: none;
   }
 }
 #accordion dt {
@@ -168,6 +169,36 @@ dl#accordion {
   margin-top: 15px;
   font-size: 25px;
   padding-bottom: 15px;
+  .pdfname {
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    border-top: solid 1px #ededed;
+    &__transition {
+      background-color: aliceblue;
+      transition-property: all;
+      transition: 0.5s linear;
+      box-shadow: inset 0 -6px 5px rgba(0, 0, 0, .2);
+      border-radius: 15px;
+      padding: 10px;
+      @media only screen and ( max-device-width: 480px) {
+        border-radius: 0;
+        font-size: 55px;
+      }
+      &:hover {
+        background-color: blue;
+        text-decoration: none;
+      }
+      &:active {
+        background: #1a92c2;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
+        color: #1679a1;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+        transition-property: all;
+        transition: 0.2s linear;
+      }
+    }
+  }
 }
 .article-memo {
   width: 70%;
@@ -216,3 +247,65 @@ footer {
   padding-left: 25px;
 }
 
+.phone-menu {
+  display: none;
+  @media only screen and ( max-device-width: 480px) {
+    display: block;
+  }
+  &__box {
+    @media only screen and ( max-device-width: 480px) {
+      a {
+        line-height: 2.5;
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        color: #fff;
+        @media only screen and ( max-device-width: 480px) {
+          font-size: 60px;
+          background-color: blue;
+          color: #fff;
+        }
+        &:hover {
+          text-decoration: none;
+          background-color: #ddd;
+        }
+        &:active {
+          color: #1679a1;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+          transition-property: all;
+          transition: 0.1s linear;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__pdf {
+    padding: 5px;
+    @media only screen and ( max-device-width: 480px) {
+    width: 200px;
+    background-color: #fff;
+    }
+    a {
+      text-decoration: none;
+      line-height: 2.5;
+      padding: 4px;
+      background: blue;
+      color: #fff;
+      margin-right: 1px;
+      border-radius: 5px;
+      transition-property: all;
+      transition: 0.3s linear;
+      @media only screen and ( max-device-width: 480px) {
+        font-size: 30px;
+        border: solid 1px blue;
+        line-height: 2.5;
+        padding: 8px;
+        background: blue;
+        color: #fff;
+      }
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
