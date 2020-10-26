@@ -20,7 +20,7 @@ class ImagesController < ApplicationController
     @image = Article.find(params[:id])
     @imgid = @image.subject_id
     @subject = Subject.find(@imgid)
-    @pdf = Image.where(subject_id: @imgid)
+    @pdf = Image.where(subject_id: @imgid, lesson_id: [1..20]).order("lesson_id ASC")
   end
 
   def edit
