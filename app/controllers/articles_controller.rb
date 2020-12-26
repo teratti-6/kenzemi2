@@ -5,14 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles1 = Article.where(subject_id:1, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles2 = Article.where(subject_id:2, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles3 = Article.where(subject_id:3, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles4 = Article.where(subject_id:4, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles5 = Article.where(subject_id:5, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles6 = Article.where(subject_id:6, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles7 = Article.where(subject_id:7, lesson_id: [1..20]).order("lesson_id ASC")
-    @articles8 = Article.where(subject_id:8, lesson_id: [1..20]).order("lesson_id ASC")
+    @articles1 = Article.where(subject_id:1, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles2 = Article.where(subject_id:2, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles3 = Article.where(subject_id:3, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles4 = Article.where(subject_id:4, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles5 = Article.where(subject_id:5, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles6 = Article.where(subject_id:6, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles7 = Article.where(subject_id:7, lesson_id: [1..100]).order("lesson_id ASC")
+    @articles8 = Article.where(subject_id:8, lesson_id: [1..100]).order("lesson_id ASC")
     
     @subjects1 = Subject.find(1)
     @subjects2 = Subject.find(2)
